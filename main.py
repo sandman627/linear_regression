@@ -33,7 +33,7 @@ def cost_function(): # squared error function
 def pdf_cost_function(pdVariableNum):
     sumoferror = 0
     for single_data in sample_data:
-        sumoferror = 2 * (hypothesis(single_data) - single_data[len(single_data)-1]) * single_data[pdVariableNum]
+        sumoferror += 2 * (hypothesis(single_data) - single_data[len(single_data)-1]) * single_data[pdVariableNum]
     return sumoferror
 
 def gradient_descent():
@@ -64,6 +64,4 @@ if __name__ == '__main__':
         checking()
 
     print(list_parameters)
-
-
 
